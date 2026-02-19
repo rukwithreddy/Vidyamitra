@@ -1,0 +1,142 @@
+/**
+ * Resume Page Styles
+ */
+
+.resume-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.upload-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.upload-card h2 {
+  margin-bottom: var(--spacing-xl);
+}
+
+.file-input-wrapper {
+  margin-bottom: var(--spacing-lg);
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: var(--background-color);
+  border: 2px dashed var(--light-gray);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.file-label:hover {
+  border-color: var(--secondary-color);
+  background: #e0f2fe;
+}
+
+.btn-upload {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-upload:hover {
+  background-color: #16a34a;
+}
+
+.btn-upload:disabled {
+  background-color: var(--medium-gray);
+}
+
+.analysis-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.score-card {
+  text-align: center;
+  margin: var(--spacing-2xl) 0;
+}
+
+.score-circle {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+}
+
+.score-value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.score-label {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.analysis-card {
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+}
+
+.analysis-card.strengths {
+  background: #d1fae5;
+}
+
+.analysis-card.improvements {
+  background: #fef3c7;
+}
+
+.analysis-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+.analysis-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.analysis-card li {
+  padding: var(--spacing-sm) 0;
+  color: var(--text-color);
+}
+
+.analysis-card li:before {
+  content: "• ";
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: var(--spacing-sm);
+}

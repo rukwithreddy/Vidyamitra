@@ -1,0 +1,238 @@
+{
+  "kind": "build_request",
+  "title": "Generate frontend-only VidyaMitra with readable JSX components and voice-based mock interview",
+  "projectName": "VidyaMitra",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Generate only frontend code without backend implementation",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "generate only frontend for now"
+        ]
+      },
+      "acceptanceCriteria": [
+        "No backend Motoko files are generated",
+        "Frontend can run independently with mock data"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Write all components using JSX format instead of TSX, ensuring readable and well-commented code suitable for beginners",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "make the code readable also and components in jsx"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All React components use .jsx file extension",
+        "Code includes clear comments explaining functionality",
+        "Variable and function names are descriptive",
+        "Component logic is simple and easy to follow"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement mock interview module as voice-based rather than text-based, with audio recording and playback capabilities",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "mockinterview should be voice based"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Mock interview page includes microphone recording functionality",
+        "User can record voice responses to interview questions",
+        "Audio playback is available for reviewing responses",
+        "Clear UI indicators for recording state (recording, paused, stopped)"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create email-based OTP authentication with login and register pages, redirecting to dashboard after successful login using protected routes",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "include email based otp verification during registration. after login user should be redirected to dashboard. use protected routes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Login page with email and OTP input fields exists",
+        "Register page includes email-based OTP verification flow",
+        "Successful authentication redirects to dashboard",
+        "Protected routes prevent unauthorized access to authenticated pages"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create dashboard layout with navbar, sidebar navigation, and main content area using plain CSS files (not Tailwind), with sidebar links for Dashboard, Resume, Roadmap, Quiz, and Progress pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "Create navbar sidebar and dashboard layout using css files not tailwind. sidebar should have links dashboard resume roadmap quiz progress"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard layout includes navbar component",
+        "Sidebar contains navigation links: Dashboard, Resume, Roadmap, Quiz, Progress",
+        "Layout styling uses plain CSS files only",
+        "Layout is responsive and clean"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create resume upload page with file input, upload button, success message display, and resume analysis result placeholder section",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "Create resume upload page with file upload input and upload button. show success message after upload. create resume analysis result section placeholder"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Resume page includes file input for uploading resumes",
+        "Upload button triggers file upload action",
+        "Success message displays after successful upload",
+        "Placeholder section exists for resume analysis results"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Create job role roadmap page where user enters job role and generates roadmap with topics, subtopics, and completion status (not started, in progress, completed), with progress saved in localStorage",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "Create page where user enters job role and clicks generate roadmap. show roadmap topics and subtopics in a list. each topic should have status not started in progress completed. progress should be saved in local storage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Roadmap page includes input field for job role and generate button",
+        "Generated roadmap displays topics and subtopics in list format",
+        "Each topic shows status: 'not started', 'in progress', or 'completed'",
+        "Progress persists using localStorage"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create topic quiz module where user enters topic, starts test with dummy questions, marks answers, and receives score",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "User enters topic and clicks start test. generate dummy questions list. allow marking answers and show score"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Quiz page includes topic input field and start test button",
+        "Dummy questions list is generated and displayed",
+        "User can select answers for each question",
+        "Final score is calculated and displayed after completion"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create progress page showing roadmap completion percentage, number of quizzes taken, and last activity, fetching data from localStorage",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "Show roadmap completion percentage number of quizzes taken and last activity. fetch data from local storage"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Progress page displays roadmap completion as percentage",
+        "Number of completed quizzes is shown",
+        "Last activity timestamp is displayed",
+        "All data is retrieved from localStorage"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Use the specified custom color palette consistently throughout the application: primary deep blue #1e3a8a, secondary sky blue #38bdf8, accent green #22c55e, background light gray #f8fafc, text dark slate #0f172a",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "Use this color palette in the design primary deep blue #1e3a8a secondary sky blue #38bdf8 accent green #22c55e background light gray #f8fafc text dark slate #0f172a"
+        ]
+      },
+      "acceptanceCriteria": [
+        "CSS uses #1e3a8a for primary color",
+        "CSS uses #38bdf8 for secondary color",
+        "CSS uses #22c55e for accent color",
+        "CSS uses #f8fafc for background color",
+        "CSS uses #0f172a for text color",
+        "Color usage is consistent across all pages and components"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Organize frontend with clean folder structure: components, pages, services, routes, context, and styles directories, with reusable navbar, sidebar, and API service files",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-initial"
+        ],
+        "quotes": [
+          "keep folder structure components pages services routes context styles. create reusable navbar sidebar and api service files"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Frontend has organized folders: components, pages, services, routes, context, styles",
+        "Navbar component is reusable across pages",
+        "Sidebar component is reusable across pages",
+        "API service file exists for centralized API calls",
+        "Structure follows beginner-friendly conventions"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not generate backend Motoko code",
+    "Use plain CSS files only, not Tailwind CSS",
+    "Use JavaScript (.jsx) instead of TypeScript (.tsx)",
+    "Keep components small and easy to understand",
+    "Use React hooks only, no complex state management libraries",
+    "Simulate backend with localStorage for persistence"
+  ],
+  "nonGoals": [
+    "Backend implementation",
+    "TypeScript usage",
+    "Tailwind CSS styling",
+    "Complex state management solutions",
+    "Real backend API integration",
+    "Text-based mock interview (voice-based only)"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "AI career guidance platform named VidyaMitra - React + Vite frontend with authentication, resume upload, job roadmap generator, quiz system, progress tracking, and voice-based mock interview. Uses custom color palette and plain CSS.",
+  "architectural_notes": [
+    "React + Vite frontend structure: components, pages, services, routes, context, styles",
+    "Plain CSS files only (no Tailwind)",
+    "React hooks for state management (no complex state libraries)",
+    "LocalStorage for simulating backend persistence",
+    "Color palette: primary #1e3a8a, secondary #38bdf8, accent #22c55e, background #f8fafc, text #0f172a",
+    "JSX components for all UI elements",
+    "Clean, beginner-friendly code style with comments"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-generate-only-frontend-code-without-backend-implementation",
+      "title": "Generate only frontend code without backend implementation",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-write-all-components-using-jsx-format-instead-of-tsx-ensuring-readable-and-well-commented-code-suitable-for-beginners",
+      "title": "Write all components using JSX format instead of TSX, ensuring readable and well-commented code suitable for beginners",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-mock-interview-module-as-voice-based-rather-than-text-based-with-audio-recording-and-playback-capabilities",
+      "title": "Implement mock interview module as voice-based rather than text-based, with audio recording and playback capabilities",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-email-based-otp-authentication-with-login-and-register-pages-redirecting-to-dashboard-after-successful-login-using-protected-routes",
+      "title": "Create email-based OTP authentication with login and register pages, redirecting to dashboard after successful login using protected routes",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-dashboard-layout-with-navbar-sidebar-navigation-and-main-content-area-using-plain-css-files-not-tailwind-with-sidebar-links-for-dashboard-resume-roadmap-quiz-and-progress-pages",
+      "title": "Create dashboard layout with navbar, sidebar navigation, and main content area using plain CSS files (not Tailwind), with sidebar links for Dashboard, Resume, Roadmap, Quiz, and Progress pages",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-resume-upload-page-with-file-input-upload-button-success-message-display-and-resume-analysis-result-placeholder-section",
+      "title": "Create resume upload page with file input, upload button, success message display, and resume analysis result placeholder section",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-job-role-roadmap-page-where-user-enters-job-role-and-generates-roadmap-with-topics-subtopics-and-completion-status-not-started-in-progress-completed-with-progress-saved-in-localstorage",
+      "title": "Create job role roadmap page where user enters job role and generates roadmap with topics, subtopics, and completion status (not started, in progress, completed), with progress saved in localStorage",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-topic-quiz-module-where-user-enters-topic-starts-test-with-dummy-questions-marks-answers-and-receives-score",
+      "title": "Create topic quiz module where user enters topic, starts test with dummy questions, marks answers, and receives score",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-progress-page-showing-roadmap-completion-percentage-number-of-quizzes-taken-and-last-activity-fetching-data-from-localstorage",
+      "title": "Create progress page showing roadmap completion percentage, number of quizzes taken, and last activity, fetching data from localStorage",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-specified-custom-color-palette-consistently-throughout-the-application-primary-deep-blue-1e3a8a-secondary-sky-blue-38bdf8-accent-green-22c55e-background-light-gray-f8fafc-text-dark-slate-0f172a",
+      "title": "Use the specified custom color palette consistently throughout the application: primary deep blue #1e3a8a, secondary sky blue #38bdf8, accent green #22c55e, background light gray #f8fafc, text dark slate #0f172a",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-organize-frontend-with-clean-folder-structure-components-pages-services-routes-context-and-styles-directories-with-reusable-navbar-sidebar-and-api-service-files",
+      "title": "Organize frontend with clean folder structure: components, pages, services, routes, context, and styles directories, with reusable navbar, sidebar, and API service files",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Email-based OTP authentication (login/register) with protected routes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Dashboard layout with navbar and sidebar navigation (CSS only)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Resume upload page with file input and success message",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Job role roadmap generator with progress tracking (localStorage)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Topic quiz module with dummy questions and scoring",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Progress page showing roadmap completion and quiz stats",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Voice-based mock interview module",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "VidyaMitra",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

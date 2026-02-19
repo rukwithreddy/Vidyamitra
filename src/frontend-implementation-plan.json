@@ -1,0 +1,300 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "VidyaMitra Frontend-Only Implementation with Voice-Based Mock Interview",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Generate only frontend code without backend implementation",
+      "acceptanceCriteria": [
+        "No backend Motoko files are generated",
+        "Frontend can run independently with mock data"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/services/mockData.jsx",
+          "operation": "create",
+          "description": "Create mock data service providing dummy data for roadmaps, quizzes, interview questions, and resume analysis to enable frontend-only operation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Write all components using JSX format with clear comments for beginners",
+      "acceptanceCriteria": [
+        "All React components use .jsx file extension",
+        "Code includes clear comments explaining functionality",
+        "Variable and function names are descriptive",
+        "Component logic is simple and easy to follow"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navbar.jsx",
+          "operation": "create",
+          "description": "Create navbar component in JSX format with descriptive variable names and inline comments explaining navigation logic"
+        },
+        {
+          "path": "frontend/src/components/Sidebar.jsx",
+          "operation": "create",
+          "description": "Create sidebar component in JSX format with clear comments explaining navigation links and active state management"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement voice-based mock interview with audio recording and playback",
+      "acceptanceCriteria": [
+        "Mock interview page includes microphone recording functionality",
+        "User can record voice responses to interview questions",
+        "Audio playback is available for reviewing responses",
+        "Clear UI indicators for recording state (recording, paused, stopped)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/MockInterview.jsx",
+          "operation": "create",
+          "description": "Create mock interview page with voice recording using MediaRecorder API, displaying interview questions one at a time, recording user audio responses, showing recording status indicators (recording/paused/stopped), and providing playback controls for reviewing recorded answers"
+        },
+        {
+          "path": "frontend/src/components/VoiceRecorder.jsx",
+          "operation": "create",
+          "description": "Create reusable voice recorder component in JSX handling microphone permissions, audio recording with start/pause/stop controls, visual recording state indicators, and audio blob generation for playback"
+        },
+        {
+          "path": "frontend/src/styles/mockInterview.css",
+          "operation": "create",
+          "description": "Create CSS file for mock interview page styling including recording button states, question display layout, and audio playback controls using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create email-based OTP authentication with protected routes",
+      "acceptanceCriteria": [
+        "Login page with email and OTP input fields exists",
+        "Register page includes email-based OTP verification flow",
+        "Successful authentication redirects to dashboard",
+        "Protected routes prevent unauthorized access to authenticated pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Login.jsx",
+          "operation": "create",
+          "description": "Create login page in JSX with email input, OTP input, submit button, mock authentication logic using localStorage, and redirect to dashboard on success with clear comments explaining the flow"
+        },
+        {
+          "path": "frontend/src/pages/Register.jsx",
+          "operation": "create",
+          "description": "Create registration page in JSX with email input, OTP generation simulation, OTP verification input, mock email sending feedback, and registration completion logic with redirect to login"
+        },
+        {
+          "path": "frontend/src/context/AuthContext.jsx",
+          "operation": "create",
+          "description": "Create authentication context in JSX managing login state, authentication status, user session in localStorage, login/logout functions, and providing auth state to protected routes"
+        },
+        {
+          "path": "frontend/src/routes/ProtectedRoute.jsx",
+          "operation": "create",
+          "description": "Create protected route wrapper component checking authentication status from AuthContext and redirecting to login page if user is not authenticated, with clear comments explaining the guard logic"
+        },
+        {
+          "path": "frontend/src/styles/auth.css",
+          "operation": "create",
+          "description": "Create CSS file for login and register pages using the specified color palette with form styling, button states, and responsive layout"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create dashboard layout with navbar, sidebar, and main content area using plain CSS",
+      "acceptanceCriteria": [
+        "Dashboard layout includes navbar component",
+        "Sidebar contains navigation links: Dashboard, Resume, Roadmap, Quiz, Progress",
+        "Layout styling uses plain CSS files only",
+        "Layout is responsive and clean"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/DashboardLayout.jsx",
+          "operation": "create",
+          "description": "Create dashboard layout component in JSX composing Navbar, Sidebar, and main content area with responsive grid structure and clear comments explaining layout composition"
+        },
+        {
+          "path": "frontend/src/components/Sidebar.jsx",
+          "operation": "modify",
+          "description": "Add navigation links for Dashboard, Resume, Roadmap, Quiz, Progress, and Mock Interview pages with active link highlighting and clear descriptive link text"
+        },
+        {
+          "path": "frontend/src/pages/Dashboard.jsx",
+          "operation": "create",
+          "description": "Create dashboard home page in JSX displaying welcome message, quick stats summary, and recent activity overview with clear comments"
+        },
+        {
+          "path": "frontend/src/styles/layout.css",
+          "operation": "create",
+          "description": "Create CSS file for dashboard layout including navbar, sidebar, and main content grid using the specified color palette with responsive breakpoints and plain CSS only"
+        },
+        {
+          "path": "frontend/src/styles/sidebar.css",
+          "operation": "create",
+          "description": "Create CSS file for sidebar styling including navigation link styles, active state, hover effects using the specified color palette"
+        },
+        {
+          "path": "frontend/src/styles/navbar.css",
+          "operation": "create",
+          "description": "Create CSS file for navbar styling including header layout, logo area, user profile section using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create resume upload page with file input, upload button, and analysis result placeholder",
+      "acceptanceCriteria": [
+        "Resume page includes file input for uploading resumes",
+        "Upload button triggers file upload action",
+        "Success message displays after successful upload",
+        "Placeholder section exists for resume analysis results"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Resume.jsx",
+          "operation": "create",
+          "description": "Create resume page in JSX with file input for PDF/DOC uploads, upload button triggering mock upload to localStorage, success message display, and placeholder section showing mock resume analysis results with clear comments"
+        },
+        {
+          "path": "frontend/src/styles/resume.css",
+          "operation": "create",
+          "description": "Create CSS file for resume page styling including file input area, upload button, success message, and analysis result placeholder using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create job role roadmap page with topic generation and progress tracking in localStorage",
+      "acceptanceCriteria": [
+        "Roadmap page includes input field for job role and generate button",
+        "Generated roadmap displays topics and subtopics in list format",
+        "Each topic shows status: 'not started', 'in progress', or 'completed'",
+        "Progress persists using localStorage"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Roadmap.jsx",
+          "operation": "create",
+          "description": "Create roadmap page in JSX with job role input, generate button triggering mock roadmap creation, displaying topics and subtopics in expandable list, status dropdowns for each topic (not started/in progress/completed), and localStorage persistence with clear comments"
+        },
+        {
+          "path": "frontend/src/services/roadmapService.jsx",
+          "operation": "create",
+          "description": "Create roadmap service in JSX providing functions to generate mock roadmap data based on job role, save/load roadmap progress to/from localStorage, and update topic status"
+        },
+        {
+          "path": "frontend/src/styles/roadmap.css",
+          "operation": "create",
+          "description": "Create CSS file for roadmap page styling including input form, topic list layout, status badges, and expandable subtopic sections using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create topic quiz module with dummy questions, answer marking, and score display",
+      "acceptanceCriteria": [
+        "Quiz page includes topic input field and start test button",
+        "Dummy questions list is generated and displayed",
+        "User can select answers for each question",
+        "Final score is calculated and displayed after completion"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Quiz.jsx",
+          "operation": "create",
+          "description": "Create quiz page in JSX with topic input, start test button generating dummy multiple-choice questions, answer selection interface, submit button, and score calculation display with clear comments explaining quiz flow"
+        },
+        {
+          "path": "frontend/src/services/quizService.jsx",
+          "operation": "create",
+          "description": "Create quiz service in JSX providing functions to generate mock quiz questions based on topic, validate answers, calculate scores, and save quiz history to localStorage"
+        },
+        {
+          "path": "frontend/src/styles/quiz.css",
+          "operation": "create",
+          "description": "Create CSS file for quiz page styling including question cards, answer option buttons, score display, and start/submit buttons using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create progress page showing roadmap completion, quizzes taken, and last activity from localStorage",
+      "acceptanceCriteria": [
+        "Progress page displays roadmap completion as percentage",
+        "Number of completed quizzes is shown",
+        "Last activity timestamp is displayed",
+        "All data is retrieved from localStorage"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Progress.jsx",
+          "operation": "create",
+          "description": "Create progress page in JSX fetching roadmap completion percentage, quiz count, and last activity timestamp from localStorage, displaying statistics in card format with clear comments"
+        },
+        {
+          "path": "frontend/src/services/progressService.jsx",
+          "operation": "create",
+          "description": "Create progress service in JSX providing functions to calculate roadmap completion percentage, count completed quizzes, retrieve last activity date, and aggregate data from localStorage"
+        },
+        {
+          "path": "frontend/src/styles/progress.css",
+          "operation": "create",
+          "description": "Create CSS file for progress page styling including stat cards, percentage display, progress bars, and summary sections using the specified color palette"
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Apply specified color palette consistently throughout the application",
+      "acceptanceCriteria": [
+        "CSS uses #1e3a8a for primary color",
+        "CSS uses #38bdf8 for secondary color",
+        "CSS uses #22c55e for accent color",
+        "CSS uses #f8fafc for background color",
+        "CSS uses #0f172a for text color",
+        "Color usage is consistent across all pages and components"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/styles/variables.css",
+          "operation": "create",
+          "description": "Create CSS variables file defining the specified color palette as CSS custom properties: --primary-color: #1e3a8a, --secondary-color: #38bdf8, --accent-color: #22c55e, --background-color: #f8fafc, --text-color: #0f172a for consistent usage across all stylesheets"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Import variables.css and apply global color scheme using the specified palette to body, headings, and base elements"
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Organize frontend with clean folder structure and reusable components",
+      "acceptanceCriteria": [
+        "Frontend has organized folders: components, pages, services, routes, context, styles",
+        "Navbar component is reusable across pages",
+        "Sidebar component is reusable across pages",
+        "API service file exists for centralized API calls",
+        "Structure follows beginner-friendly conventions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/services/apiService.jsx",
+          "operation": "create",
+          "description": "Create API service file in JSX providing centralized mock API functions for future backend integration with clear comments explaining each endpoint placeholder"
+        },
+        {
+          "path": "frontend/src/App.jsx",
+          "operation": "modify",
+          "description": "Update App component to set up React Router with route definitions for all pages (Login, Register, Dashboard, Resume, Roadmap, Quiz, Progress, MockInterview), wrap authenticated routes with ProtectedRoute component, and wrap the app with AuthContext provider"
+        }
+      ]
+    }
+  ]
+}

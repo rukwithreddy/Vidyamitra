@@ -1,0 +1,223 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-generate-only-frontend-code-without-backend-implementation",
+      "featureTitle": "Generate only frontend code without backend implementation",
+      "files": [
+        "frontend/src/services/mockData.jsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-write-all-components-using-jsx-format-instead-of-tsx-ensuring-readable-and-well-commented-code-suitable-for-beginners",
+      "featureTitle": "Write all components using JSX format instead of TSX, ensuring readable and well-commented code suitable for beginners",
+      "files": [
+        "frontend/src/components/Navbar.jsx",
+        "frontend/src/components/Sidebar.jsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-mock-interview-module-as-voice-based-rather-than-text-based-with-audio-recording-and-playback-capabilities",
+      "featureTitle": "Implement mock interview module as voice-based rather than text-based, with audio recording and playback capabilities",
+      "files": [
+        "frontend/src/components/VoiceRecorder.jsx",
+        "frontend/src/pages/MockInterview.jsx",
+        "frontend/src/styles/mockInterview.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-email-based-otp-authentication-with-login-and-register-pages-redirecting-to-dashboard-after-successful-login-using-protected-routes",
+      "featureTitle": "Create email-based OTP authentication with login and register pages, redirecting to dashboard after successful login using protected routes",
+      "files": [
+        "frontend/src/context/AuthContext.jsx",
+        "frontend/src/pages/Login.jsx",
+        "frontend/src/pages/Register.jsx",
+        "frontend/src/routes/ProtectedRoute.jsx",
+        "frontend/src/styles/auth.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-dashboard-layout-with-navbar-sidebar-navigation-and-main-content-area-using-plain-css-files-not-tailwind-with-sidebar-links-for-dashboard-resume-roadmap-quiz-and-progress-pages",
+      "featureTitle": "Create dashboard layout with navbar, sidebar navigation, and main content area using plain CSS files (not Tailwind), with sidebar links for Dashboard, Resume, Roadmap, Quiz, and Progress pages",
+      "files": [
+        "frontend/src/components/DashboardLayout.jsx",
+        "frontend/src/components/Sidebar.jsx",
+        "frontend/src/pages/Dashboard.jsx",
+        "frontend/src/styles/layout.css",
+        "frontend/src/styles/navbar.css",
+        "frontend/src/styles/sidebar.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-resume-upload-page-with-file-input-upload-button-success-message-display-and-resume-analysis-result-placeholder-section",
+      "featureTitle": "Create resume upload page with file input, upload button, success message display, and resume analysis result placeholder section",
+      "files": [
+        "frontend/src/pages/Resume.jsx",
+        "frontend/src/styles/resume.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-job-role-roadmap-page-where-user-enters-job-role-and-generates-roadmap-with-topics-subtopics-and-completion-status-not-started-in-progress-completed-with-progress-saved-in-localstorage",
+      "featureTitle": "Create job role roadmap page where user enters job role and generates roadmap with topics, subtopics, and completion status (not started, in progress, completed), with progress saved in localStorage",
+      "files": [
+        "frontend/src/pages/Roadmap.jsx",
+        "frontend/src/services/roadmapService.jsx",
+        "frontend/src/styles/roadmap.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-topic-quiz-module-where-user-enters-topic-starts-test-with-dummy-questions-marks-answers-and-receives-score",
+      "featureTitle": "Create topic quiz module where user enters topic, starts test with dummy questions, marks answers, and receives score",
+      "files": [
+        "frontend/src/pages/Quiz.jsx",
+        "frontend/src/services/quizService.jsx",
+        "frontend/src/styles/quiz.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-progress-page-showing-roadmap-completion-percentage-number-of-quizzes-taken-and-last-activity-fetching-data-from-localstorage",
+      "featureTitle": "Create progress page showing roadmap completion percentage, number of quizzes taken, and last activity, fetching data from localStorage",
+      "files": [
+        "frontend/src/pages/Progress.jsx",
+        "frontend/src/services/progressService.jsx",
+        "frontend/src/styles/progress.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-the-specified-custom-color-palette-consistently-throughout-the-application-primary-deep-blue-1e3a8a-secondary-sky-blue-38bdf8-accent-green-22c55e-background-light-gray-f8fafc-text-dark-slate-0f172a",
+      "featureTitle": "Use the specified custom color palette consistently throughout the application: primary deep blue #1e3a8a, secondary sky blue #38bdf8, accent green #22c55e, background light gray #f8fafc, text dark slate #0f172a",
+      "files": [
+        "frontend/src/styles/variables.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-organize-frontend-with-clean-folder-structure-components-pages-services-routes-context-and-styles-directories-with-reusable-navbar-sidebar-and-api-service-files",
+      "featureTitle": "Organize frontend with clean folder structure: components, pages, services, routes, context, and styles directories, with reusable navbar, sidebar, and API service files",
+      "files": [
+        "frontend/src/App.jsx",
+        "frontend/src/services/apiService.jsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

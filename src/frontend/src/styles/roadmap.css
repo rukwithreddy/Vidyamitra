@@ -1,0 +1,159 @@
+/**
+ * Roadmap Page Styles
+ */
+
+.roadmap-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.roadmap-input-section {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.input-group {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.job-role-input {
+  flex: 1;
+  padding: var(--spacing-md);
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.job-role-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.btn-generate {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-generate:hover {
+  background-color: #1e40af;
+}
+
+.roadmap-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.topic-card {
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.topic-card:hover {
+  border-color: var(--secondary-color);
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: var(--background-color);
+}
+
+.topic-toggle {
+  background: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: var(--spacing-xs);
+}
+
+.topic-header h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.status-select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.status-select.status-not-started {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.status-select.status-in-progress {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.status-select.status-completed {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.subtopics-list {
+  padding: var(--spacing-lg);
+  background: var(--white);
+}
+
+.subtopics-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subtopics-list li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-xl);
+  position: relative;
+  color: var(--text-color);
+}
+
+.subtopics-list li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .topic-header {
+    flex-wrap: wrap;
+  }
+
+  .status-select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-19T13:12:17.290Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 11,
+    "implemented": 11,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Generate only frontend code without backend implementation",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/services/mockData.jsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/services/mockData.jsx"
+        ]
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Use the specified custom color palette consistently throughout the application: primary deep blue #1e3a8a, secondary sky blue #38bdf8, accent green #22c55e, background light gray #f8fafc, text dark slate #0f172a",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/styles/variables.css",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/styles/variables.css"
+        ]
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Organize frontend with clean folder structure: components, pages, services, routes, context, and styles directories, with reusable navbar, sidebar, and API service files",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/services/apiService.jsx",
+          "frontend/src/App.jsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/services/apiService.jsx",
+          "frontend/src/App.jsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Write all components using JSX format instead of TSX, ensuring readable and well-commented code suitable for beginners",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navbar.jsx",
+          "frontend/src/components/Sidebar.jsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navbar.jsx",
+          "frontend/src/components/Sidebar.jsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Implement mock interview module as voice-based rather than text-based, with audio recording and playback capabilities",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/MockInterview.jsx",
+          "frontend/src/components/VoiceRecorder.jsx",
+          "frontend/src/styles/mockInterview.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/MockInterview.jsx",
+          "frontend/src/components/VoiceRecorder.jsx",
+          "frontend/src/styles/mockInterview.css"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create email-based OTP authentication with login and register pages, redirecting to dashboard after successful login using protected routes",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Login.jsx",
+          "frontend/src/pages/Register.jsx",
+          "frontend/src/context/AuthContext.jsx",
+          "frontend/src/routes/ProtectedRoute.jsx",
+          "frontend/src/styles/auth.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Login.jsx",
+          "frontend/src/pages/Register.jsx",
+          "frontend/src/context/AuthContext.jsx",
+          "frontend/src/routes/ProtectedRoute.jsx",
+          "frontend/src/styles/auth.css"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Create dashboard layout with navbar, sidebar navigation, and main content area using plain CSS files (not Tailwind), with sidebar links for Dashboard, Resume, Roadmap, Quiz, and Progress pages",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/DashboardLayout.jsx",
+          "frontend/src/components/Sidebar.jsx",
+          "frontend/src/pages/Dashboard.jsx",
+          "frontend/src/styles/layout.css",
+          "frontend/src/styles/sidebar.css",
+          "frontend/src/styles/navbar.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/DashboardLayout.jsx",
+          "frontend/src/components/Sidebar.jsx",
+          "frontend/src/pages/Dashboard.jsx",
+          "frontend/src/styles/layout.css",
+          "frontend/src/styles/sidebar.css",
+          "frontend/src/styles/navbar.css"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Create resume upload page with file input, upload button, success message display, and resume analysis result placeholder section",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Resume.jsx",
+          "frontend/src/styles/resume.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Resume.jsx",
+          "frontend/src/styles/resume.css"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Create job role roadmap page where user enters job role and generates roadmap with topics, subtopics, and completion status (not started, in progress, completed), with progress saved in localStorage",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Roadmap.jsx",
+          "frontend/src/services/roadmapService.jsx",
+          "frontend/src/styles/roadmap.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Roadmap.jsx",
+          "frontend/src/services/roadmapService.jsx",
+          "frontend/src/styles/roadmap.css"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Create topic quiz module where user enters topic, starts test with dummy questions, marks answers, and receives score",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Quiz.jsx",
+          "frontend/src/services/quizService.jsx",
+          "frontend/src/styles/quiz.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Quiz.jsx",
+          "frontend/src/services/quizService.jsx",
+          "frontend/src/styles/quiz.css"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create progress page showing roadmap completion percentage, number of quizzes taken, and last activity, fetching data from localStorage",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/Progress.jsx",
+          "frontend/src/services/progressService.jsx",
+          "frontend/src/styles/progress.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/Progress.jsx",
+          "frontend/src/services/progressService.jsx",
+          "frontend/src/styles/progress.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/.eslintrc.cjs",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.jsx",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/DashboardLayout.jsx",
+    "frontend/src/components/DashboardLayout.tsx",
+    "frontend/src/components/Navbar.jsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/components/Sidebar.jsx",
+    "frontend/src/components/Sidebar.tsx",
+    "frontend/src/components/VoiceRecorder.jsx",
+    "frontend/src/components/VoiceRecorder.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/context/AuthContext.jsx",
+    "frontend/src/context/AuthContext.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/main.jsx",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/Dashboard.jsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/Login.jsx",
+    "frontend/src/pages/Login.tsx",
+    "frontend/src/pages/MockInterview.jsx",
+    "frontend/src/pages/MockInterview.tsx",
+    "frontend/src/pages/Progress.jsx",
+    "frontend/src/pages/Progress.tsx",
+    "frontend/src/pages/Quiz.jsx",
+    "frontend/src/pages/Quiz.tsx",
+    "frontend/src/pages/Register.jsx",
+    "frontend/src/pages/Register.tsx",
+    "frontend/src/pages/Resume.jsx",
+    "frontend/src/pages/Resume.tsx",
+    "frontend/src/pages/Roadmap.jsx",
+    "frontend/src/pages/Roadmap.tsx",
+    "frontend/src/routes/ProtectedRoute.jsx",
+    "frontend/src/services/apiService.jsx",
+    "frontend/src/services/apiService.ts",
+    "frontend/src/services/mockData.jsx",
+    "frontend/src/services/mockData.ts",
+    "frontend/src/services/progressService.jsx",
+    "frontend/src/services/progressService.ts",
+    "frontend/src/services/quizService.jsx",
+    "frontend/src/services/quizService.ts",
+    "frontend/src/services/roadmapService.jsx",
+    "frontend/src/services/roadmapService.ts",
+    "frontend/src/styles/auth.css",
+    "frontend/src/styles/dashboard.css",
+    "frontend/src/styles/global.css",
+    "frontend/src/styles/layout.css",
+    "frontend/src/styles/mockInterview.css",
+    "frontend/src/styles/navbar.css",
+    "frontend/src/styles/progress.css",
+    "frontend/src/styles/quiz.css",
+    "frontend/src/styles/resume.css",
+    "frontend/src/styles/roadmap.css",
+    "frontend/src/styles/sidebar.css",
+    "frontend/src/styles/variables.css",
+    "frontend/src/styles/voiceRecorder.css",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

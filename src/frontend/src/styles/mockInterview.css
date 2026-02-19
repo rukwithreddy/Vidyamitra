@@ -1,0 +1,215 @@
+/**
+ * Mock Interview Page Styles
+ */
+
+.mock-interview-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.interview-start-section {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+}
+
+.interview-intro-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+  text-align: center;
+}
+
+.interview-intro-card h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.interview-intro-card > p {
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-xl);
+}
+
+.interview-instructions {
+  text-align: left;
+  background: var(--background-color);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.interview-instructions h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+}
+
+.interview-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.interview-instructions li {
+  padding: var(--spacing-sm) 0;
+  color: var(--text-color);
+}
+
+.btn-start-interview {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-start-interview:hover {
+  background-color: #16a34a;
+}
+
+.interview-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.interview-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.interview-progress span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.progress-bar-small {
+  width: 100%;
+  height: 8px;
+  background: var(--light-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.progress-fill-small {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transition: width var(--transition-normal);
+}
+
+.question-display {
+  background: var(--background-color);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.question-display h2 {
+  font-size: 1.1rem;
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.interview-question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.interview-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.btn-nav-interview {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-nav-interview:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+.btn-nav-interview:disabled {
+  background: var(--medium-gray);
+}
+
+.interview-complete {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-2xl);
+}
+
+.complete-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.complete-card h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.complete-card > p {
+  text-align: center;
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.review-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.review-section h3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.recordings-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.recording-item {
+  background: var(--background-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.recording-question {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.audio-player {
+  width: 100%;
+  height: 40px;
+}
+
+.btn-restart-interview {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.btn-restart-interview:hover {
+  background-color: #1e40af;
+}
