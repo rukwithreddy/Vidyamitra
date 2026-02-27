@@ -1,17 +1,18 @@
 /**
  * API Service
- * Centralized service for future backend API integration
- * Currently returns mock data, but can be easily updated to call real APIs
+ * Centralized service for backend API integration
  */
+
+const API_BASE_URL = 'http://127.0.0.1:8000';
 
 interface LoginResponse {
   success: boolean;
-  user: { email: string };
+  message?: string;
 }
 
 interface RegisterResponse {
   success: boolean;
-  user: { name: string; email: string };
+  message?: string;
 }
 
 interface ResumeAnalysis {
@@ -22,7 +23,8 @@ interface ResumeAnalysis {
 
 interface UploadResponse {
   success: boolean;
-  analysis: ResumeAnalysis;
+  message?: string;
+  data?: any;
 }
 
 interface ApiResponse {
@@ -30,66 +32,99 @@ interface ApiResponse {
 }
 
 /**
- * Login user with email and OTP
- * TODO: Replace with actual backend API call
+ * Login user
  */
-export async function loginUser(email: string, otp: string): Promise<LoginResponse> {
-  // Simulate API call
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (otp === '123456') {
-        resolve({ success: true, user: { email } });
-      } else {
-        reject(new Error('Invalid OTP'));
-      }
-    }, 500);
-  });
+export async function loginUser(email: string, password: string): Promise<LoginResponse> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/login/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      return { success: true, message: data.message };
+    } else {
+      return { success: false, message: data.detail || 'Login failed' };
+    }
+  } catch (error: any) {
+    return { success: false, message: error.message || 'Network error' };
+  }
 }
 
 /**
  * Register new user
- * TODO: Replace with actual backend API call
  */
-export async function registerUser(name: string, email: string, otp: string): Promise<RegisterResponse> {
-  // Simulate API call
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (otp === '123456') {
-        resolve({ success: true, user: { name, email } });
-      } else {
-        reject(new Error('Invalid OTP'));
-      }
-    }, 500);
-  });
+export async function registerUser(name: string, email: string, password: string): Promise<RegisterResponse> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/register/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, password })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      return { success: true, message: data.message };
+    } else {
+      return { success: false, message: data.detail || 'Registration failed' };
+    }
+  } catch (error: any) {
+    return { success: false, message: error.message || 'Network error' };
+  }
 }
 
 /**
  * Upload resume file
- * TODO: Replace with actual backend API call
  */
 export async function uploadResume(file: File): Promise<UploadResponse> {
-  // Simulate API call
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        success: true,
-        analysis: {
-          score: 85,
-          strengths: ['Clear structure', 'Good keywords'],
-          improvements: ['Add more metrics', 'Improve formatting']
-        }
-      });
-    }, 1000);
-  });
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const response = await fetch(`${API_BASE_URL}/resume/`, {
+      method: 'POST',
+      // The browser will automatically set the Content-Type to multipart/form-data
+      // along with the correct boundary when passing FormData.
+      body: formData,
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      return { success: true, message: data.message, data: data.data };
+    } else {
+      return { success: false, message: data.detail || 'Upload failed' };
+    }
+  } catch (error: any) {
+    return { success: false, message: error.message || 'Network error' };
+  }
 }
 
 /**
- * Generate roadmap for job role
- * TODO: Replace with actual backend API call
+ * Fetch candidate profile (Requires auth cookie)
+ */
+export async function getProfile(): Promise<UploadResponse> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/profile`, {
+      method: 'GET',
+      credentials: 'include'
+    });
+    const data = await response.json();
+    if (response.ok) {
+      return { success: true, data: data.data };
+    } else {
+      return { success: false, message: data.detail || 'Failed to fetch profile' };
+    }
+  } catch (error: any) {
+    return { success: false, message: error.message || 'Network error' };
+  }
+}
+
+/**
+ * Generate roadmap for job role (Mocked for now)
  */
 export async function generateRoadmapAPI(jobRole: string): Promise<ApiResponse> {
-  // Currently using local service
-  // In future, this will call backend API
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ success: true });
@@ -98,15 +133,13 @@ export async function generateRoadmapAPI(jobRole: string): Promise<ApiResponse> 
 }
 
 /**
- * Generate quiz for topic
- * TODO: Replace with actual backend API call
+ * Generate quiz for topic (Mocked for now)
  */
 export async function generateQuizAPI(topic: string): Promise<ApiResponse> {
-  // Currently using local service
-  // In future, this will call backend API
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({ success: true });
     }, 500);
   });
 }
+

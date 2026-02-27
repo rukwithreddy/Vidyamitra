@@ -1,0 +1,242 @@
+/* Role Selection UI */
+
+.role-selection-page {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.role-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.back-link {
+    color: #718096;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #6B46C1;
+}
+
+.role-header-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin: 0 0 0.5rem 0;
+}
+
+.role-header-content p {
+    color: #718096;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    color: #A0AEC0;
+    font-size: 1.2rem;
+}
+
+.role-search-input {
+    width: 100%;
+    padding: 1.25rem 1rem 1.25rem 3rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.role-search-input:focus {
+    outline: none;
+    border-color: #6B46C1;
+    box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.15);
+}
+
+/* Grids */
+.role-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.job-role-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.job-role-card:hover {
+    border-color: #CBD5E0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.job-role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.role-title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.role-title-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2D3748;
+    margin: 0;
+}
+
+.role-category {
+    font-size: 0.85rem;
+    color: #6B46C1;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-select-role {
+    background: linear-gradient(90deg, #6B46C1 0%, #553C9A 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.2s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(107, 70, 193, 0.2);
+}
+
+.btn-select-role:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.role-stats-row {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+    border-top: 1px solid #EDF2F7;
+    border-bottom: 1px solid #EDF2F7;
+}
+
+.role-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.role-stat .stat-icon {
+    font-size: 1.5rem;
+    background: #F7FAFC;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.stat-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #A0AEC0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.stat-val {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.role-skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.skills-heading {
+    font-size: 0.9rem;
+    color: #718096;
+    font-weight: 600;
+}
+
+.job-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.job-skill-tag {
+    background: white;
+    color: #4A5568;
+    border: 1px solid #CBD5E0;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.job-skill-tag:hover {
+    background: #F7FAFC;
+    border-color: #A0AEC0;
+    color: #2D3748;
+}
+
+.no-roles-found {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px dashed #CBD5E0;
+    color: #718096;
+}
+
+@media (max-width: 768px) {
+    .job-role-card {
+        padding: 1.5rem;
+    }
+
+    .job-role-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .role-stats-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}

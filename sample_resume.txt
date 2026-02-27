@@ -1,0 +1,18 @@
+John Doe
+john.doe@email.com
+(555) 123-4567
+
+Education:
+B.S. Computer Science, University of Technology, 2018-2022
+
+Experience:
+Software Engineer at Tech Corp (2022-Present)
+- Developed RESTful APIs using Python and FastAPI.
+- Built responsive frontends using React and TypeScript.
+- Managed PostgreSQL databases.
+
+Skills:
+Python, FastAPI, React, TypeScript, JavaScript, SQL, Git.
+
+Projects:
+Task Manager App: A full-stack application built with React and Node.js.

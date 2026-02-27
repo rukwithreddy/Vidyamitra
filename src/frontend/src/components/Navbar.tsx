@@ -1,38 +1,75 @@
 import React from 'react';
-import { useNavigate } from '@tanstack/react-router';
+import { Link, useRouterState, useNavigate } from '@tanstack/react-router';
 import { useAuth } from '../context/AuthContext';
+import { GraduationCap, BarChart2, FileText, Map, ClipboardList, Mic, TrendingUp, LogOut, User } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { staggerContainer, fadeUpVariant } from '../lib/animations';
 import '../styles/navbar.css';
 
-/**
- * Navbar Component
- * Displays app logo, user info, and logout button
- */
 function Navbar() {
   const navigate = useNavigate();
   const { userEmail, logout } = useAuth();
+  const routerState = useRouterState();
+  const currentPath = routerState.location.pathname;
 
-  /**
-   * Handle user logout
-   */
+  const isActive = (path: string) => currentPath === path;
+
   const handleLogout = () => {
     logout();
     navigate({ to: '/login' });
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <h1>VidyaMitra</h1>
-        <span className="navbar-tagline">AI Career Guidance</span>
+    <motion.nav className="top-navbar" variants={staggerContainer} initial="hidden" animate="visible">
+      <motion.div className="navbar-left flex items-center gap-4" variants={fadeUpVariant}>
+        <Link to="/dashboard" className="navbar-brand flex items-center gap-2 text-inherit no-underline">
+          <GraduationCap className="navbar-logo" size={28} />
+          <h1>VidyaMitra</h1>
+        </Link>
+      </motion.div>
+
+      <div className="navbar-links">
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/dashboard" className={`nav-link ${isActive('/dashboard') ? 'active' : ''}`}>
+            <BarChart2 className="nav-icon" size={18} /> Dashboard
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/resume" className={`nav-link ${isActive('/resume') ? 'active' : ''}`}>
+            <FileText className="nav-icon" size={18} /> Resume
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/roadmap" className={`nav-link ${isActive('/roadmap') ? 'active' : ''}`}>
+            <Map className="nav-icon" size={18} /> Plan
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/quiz" className={`nav-link ${isActive('/quiz') ? 'active' : ''}`}>
+            <ClipboardList className="nav-icon" size={18} /> Quiz
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/mock-interview" className={`nav-link ${isActive('/mock-interview') ? 'active' : ''}`}>
+            <Mic className="nav-icon" size={18} /> Interview
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/progress" className={`nav-link ${isActive('/progress') ? 'active' : ''}`}>
+            <TrendingUp className="nav-icon" size={18} /> Progress
+          </Link>
+        </motion.div>
       </div>
-      
-      <div className="navbar-user">
-        <span className="user-email">{userEmail}</span>
+
+      <motion.div className="navbar-user flex items-center gap-4" variants={fadeUpVariant}>
+        <Link to="/my-profile" className="flex items-center justify-center p-2 rounded-full bg-purple-600/20 text-purple-400 hover:bg-purple-600/30 transition-colors cursor-pointer">
+          <User size={20} />
+        </Link>
         <button onClick={handleLogout} className="btn-logout">
-          Logout
+          <LogOut className="nav-icon" size={18} /> Logout
         </button>
-      </div>
-    </nav>
+      </motion.div>
+    </motion.nav>
   );
 }
 

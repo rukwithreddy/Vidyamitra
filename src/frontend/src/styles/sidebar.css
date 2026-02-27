@@ -4,8 +4,8 @@
 
 .sidebar {
   width: 250px;
-  background-color: var(--white);
-  border-right: 1px solid var(--light-gray);
+  background-color: var(--background-color);
+  border-right: 1px solid var(--medium-gray);
   padding: var(--spacing-lg) 0;
 }
 
@@ -27,12 +27,13 @@
 }
 
 .nav-link:hover {
-  background-color: var(--background-color);
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--primary-color);
 }
 
 .nav-link.active {
-  background-color: #dbeafe;
+  background-color: rgba(139, 92, 246, 0.15);
+  /* Purple tint */
   color: var(--primary-color);
   border-left-color: var(--primary-color);
 }

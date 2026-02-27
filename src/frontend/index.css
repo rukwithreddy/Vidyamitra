@@ -77,7 +77,38 @@
     * {
         @apply border-border;
     }
+
     body {
         @apply bg-background text-foreground;
     }
+}
+
+@layer utilities {
+    .glass {
+        @apply bg-white/5 dark:bg-[#1a1325]/80 backdrop-blur-md border border-white/10 dark:border-white/10;
+    }
+
+    .shadow-emerald-glow {
+        box-shadow: 0 0 40px -10px rgba(139, 92, 246, 0.7);
+    }
+}
+
+/* 🌌 Custom background gradient for hero */
+.bg-reactbits {
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.25), transparent 60%),
+        linear-gradient(135deg, #1a1325, #0b0b0f 60%);
+}
+
+/* ⚡ Aurora-like floating glow */
+.aurora {
+    background: radial-gradient(600px circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 70%);
+    filter: blur(120px);
+    opacity: 0.4;
+}
+
+/* 💜 Text gradient helper */
+.text-gradient {
+    background: linear-gradient(to right, #c084fc, #a78bfa, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

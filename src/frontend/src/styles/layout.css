@@ -1,29 +1,30 @@
 /**
  * Dashboard Layout Styles
- * Defines the main layout structure with navbar and sidebar
  */
 
 .dashboard-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.dashboard-content {
-  display: flex;
-  flex: 1;
+  background-color: var(--background-color);
+  color: var(--white);
 }
 
 .main-content {
   flex: 1;
-  padding: var(--spacing-xl);
-  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
   overflow-y: auto;
 }
 
-/* Responsive Design */
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
 @media (max-width: 768px) {
   .main-content {
-    padding: var(--spacing-md);
+    padding: 1rem;
   }
 }

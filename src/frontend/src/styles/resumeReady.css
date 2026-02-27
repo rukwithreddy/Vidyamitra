@@ -1,0 +1,209 @@
+/* Resume Ready UI */
+.resume-ready-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.ready-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 1.5rem;
+}
+
+.ready-title-row h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1A202C;
+    margin: 0;
+}
+
+.ready-header-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-icon {
+    background: white;
+    border: 1px solid #E2E8F0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #4A5568;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-icon:hover {
+    background: #F7FAFC;
+}
+
+.btn-primary-small {
+    background: #6B46C1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Document Preview */
+.resume-preview-container {
+    background: #F1F5F9;
+    padding: 3rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-document {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 1 / 1.414;
+    /* A4 aspect ratio approximation */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.doc-header {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+}
+
+.doc-header h2 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.doc-header p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.doc-section h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.25rem;
+}
+
+.doc-section p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.doc-item {
+    margin-bottom: 1rem;
+}
+
+.doc-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.doc-item ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.doc-item li {
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
+/* Benefits Banner */
+.ready-benefits-banner {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    background: #FAF5FF;
+    border: 1px solid #E9D8FD;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #553C9A;
+    font-weight: 500;
+}
+
+.b-icon {
+    font-size: 1.2rem;
+}
+
+/* Footer Actions */
+.ready-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btn-outline {
+    border: 2px solid #E2E8F0;
+    background: transparent;
+    color: #4A5568;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary-large {
+    background: linear-gradient(90deg, #6B46C1 0%, #553C9A 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(107, 70, 193, 0.2);
+}
+
+@media (max-width: 900px) {
+    .ready-title-row {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .resume-preview-container {
+        padding: 1rem;
+    }
+
+    .ready-benefits-banner {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .ready-footer-actions {
+        flex-direction: column;
+    }
+}

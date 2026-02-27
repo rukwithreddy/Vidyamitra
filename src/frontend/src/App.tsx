@@ -8,6 +8,14 @@ import Roadmap from './pages/Roadmap';
 import Quiz from './pages/Quiz';
 import Progress from './pages/Progress';
 import MockInterview from './pages/MockInterview';
+import Profile from './pages/Profile';
+import ProfileBuilder from './pages/ProfileBuilder';
+import TemplateSelection from './pages/TemplateSelection';
+import ResumeReady from './pages/ResumeReady';
+import ResumeAnalysis from './pages/ResumeAnalysis';
+import DomainSelection from './pages/DomainSelection';
+import RoleSelection from './pages/RoleSelection';
+import Jobs from './pages/Jobs';
 import DashboardLayout from './components/DashboardLayout';
 import './styles/variables.css';
 import './styles/global.css';
@@ -30,12 +38,12 @@ function RootLayout() {
  */
 function ProtectedLayout() {
   const { isAuthenticated } = useAuth();
-  
+
   if (!isAuthenticated) {
     window.location.href = '/login';
     return null;
   }
-  
+
   return <Outlet />;
 }
 
@@ -114,6 +122,54 @@ const mockInterviewRoute = createRoute({
   component: MockInterview,
 });
 
+const profileBuilderRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/profile-builder',
+  component: ProfileBuilder,
+});
+
+const profileRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/my-profile',
+  component: Profile,
+});
+
+const templateSelectionRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/template-selection',
+  component: TemplateSelection,
+});
+
+const resumeReadyRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/resume-ready',
+  component: ResumeReady,
+});
+
+const resumeAnalysisRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/resume-analysis',
+  component: ResumeAnalysis,
+});
+
+const domainSelectionRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/domain-selection',
+  component: DomainSelection,
+});
+
+const roleSelectionRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/role-selection',
+  component: RoleSelection,
+});
+
+const jobsRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/jobs',
+  component: Jobs,
+});
+
 // Index route redirects to dashboard
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -129,10 +185,18 @@ const routeTree = rootRoute.addChildren([
   protectedRoute.addChildren([
     dashboardRoute,
     resumeRoute,
+    profileRoute,
+    profileBuilderRoute,
+    templateSelectionRoute,
+    resumeReadyRoute,
+    resumeAnalysisRoute,
+    domainSelectionRoute,
+    roleSelectionRoute,
     roadmapRoute,
     quizRoute,
     progressRoute,
     mockInterviewRoute,
+    jobsRoute,
   ]),
 ]);
 
