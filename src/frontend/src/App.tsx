@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Landing from './pages/Landing';
 import Resume from './pages/Resume';
 import Roadmap from './pages/Roadmap';
 import Quiz from './pages/Quiz';
@@ -54,7 +55,7 @@ function ProtectedLayout() {
 function IndexRedirect() {
   const { isAuthenticated } = useAuth();
   if (isAuthenticated) {
-    window.location.href = '/dashboard';
+    window.location.href = '/home';
   } else {
     window.location.href = '/login';
   }
@@ -90,6 +91,12 @@ const dashboardRoute = createRoute({
   getParentRoute: () => protectedRoute,
   path: '/dashboard',
   component: Dashboard,
+});
+
+const homeRoute = createRoute({
+  getParentRoute: () => protectedRoute,
+  path: '/home',
+  component: Landing,
 });
 
 const resumeRoute = createRoute({
@@ -183,6 +190,7 @@ const routeTree = rootRoute.addChildren([
   registerRoute,
   indexRoute,
   protectedRoute.addChildren([
+    homeRoute,
     dashboardRoute,
     resumeRoute,
     profileRoute,

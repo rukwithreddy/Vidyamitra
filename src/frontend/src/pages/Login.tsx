@@ -45,7 +45,7 @@ function Login() {
       const response = await loginUser(email, password);
       if (response.success) {
         login(email);
-        navigate({ to: '/dashboard' });
+        navigate({ to: '/home' });
       } else {
         setError(response.message || 'Login failed. Please try again.');
       }

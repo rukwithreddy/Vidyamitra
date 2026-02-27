@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useRouterState, useNavigate } from '@tanstack/react-router';
 import { useAuth } from '../context/AuthContext';
-import { GraduationCap, BarChart2, FileText, Map, ClipboardList, Mic, TrendingUp, LogOut, User } from 'lucide-react';
+import { GraduationCap, BarChart2, FileText, Map, ClipboardList, Mic, TrendingUp, LogOut, User, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeUpVariant } from '../lib/animations';
 import '../styles/navbar.css';
@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <motion.nav className="top-navbar" variants={staggerContainer} initial="hidden" animate="visible">
       <motion.div className="navbar-left flex items-center gap-4" variants={fadeUpVariant}>
-        <Link to="/dashboard" className="navbar-brand flex items-center gap-2 text-inherit no-underline">
+        <Link to="/home" className="navbar-brand flex items-center gap-2 text-inherit no-underline">
           <GraduationCap className="navbar-logo" size={28} />
           <h1>VidyaMitra</h1>
         </Link>
@@ -57,6 +57,11 @@ function Navbar() {
         <motion.div variants={fadeUpVariant}>
           <Link to="/progress" className={`nav-link ${isActive('/progress') ? 'active' : ''}`}>
             <TrendingUp className="nav-icon" size={18} /> Progress
+          </Link>
+        </motion.div>
+        <motion.div variants={fadeUpVariant}>
+          <Link to="/jobs" className={`nav-link ${isActive('/jobs') ? 'active' : ''}`}>
+            <Briefcase className="nav-icon" size={18} /> Jobs
           </Link>
         </motion.div>
       </div>
